@@ -1,0 +1,16 @@
+local success, errorr = pcall(function()
+    local list = {
+        ["https://raw.githubusercontent.com/ScriptinToy/anime-sim/main/loader"] = 3102144307, --  Anime Clicker
+    }
+    for k, v in next, list do
+        if game.PlaceId == v then
+            loadstring(game:HttpGet(k, true))()
+        end
+    end
+end)
+
+if errorr then
+    warn("\nContact Person, There has been a critical error:\nScreenshot him the error.\n" .. errorr)
+else
+    warn(" ZZZ Hub v1.0 Loaded, Should be working fine")
+end
